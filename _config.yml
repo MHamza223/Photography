@@ -1,0 +1,14 @@
+# _config.yml
+
+title: My Jekyll Site
+description: This is a description of my Jekyll site.
+
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: JustGoodThemes/BlogBox-Jekyll-Theme-master
+
+markdown: kramdown
+
+baseurl: "/Photography"  # Adjust if your site is hosted in a subdirectory
+url: "https://MHamza223.github.io"  # Replace with your GitHub Pages URL
