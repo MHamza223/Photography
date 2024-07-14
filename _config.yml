@@ -6,8 +6,7 @@ description: This is a description of my Jekyll site.
 plugins:
   - jekyll-remote-theme
 
-remote_theme: JustGoodThemes/BlogBox-Jekyll-Theme-master
-
+remote_theme: JustGoodThemes/blogbox-jekyll-theme
 markdown: kramdown
 
 baseurl: "/Photography"  # Adjust if your site is hosted in a subdirectory
