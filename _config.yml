@@ -8,6 +8,5 @@ plugins:
 
 remote_theme: JustGoodThemes/blogbox-jekyll-theme
 markdown: kramdown
-
 baseurl: "/Photography"  # Adjust if your site is hosted in a subdirectory
 url: "https://MHamza223.github.io"  # Replace with your GitHub Pages URL
