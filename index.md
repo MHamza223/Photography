@@ -5,7 +5,7 @@ title: "Home"
 
 <div class="categories">
   <div class="category">
-    <a href="{{ '/categories/wedding/' | relative_url }}">
+    <a href="{{ '/categories/Wedding/' | relative_url }}">
       <h2>Wedding</h2>
       <img src="{{ '/WeddingImages/DSC04696.jpg' | relative_url }}" alt="Wedding">
     </a>
