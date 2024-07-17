@@ -1,7 +1,6 @@
 # _config.yml
 
-title: My Jekyll Site
-description: This is a description of my Jekyll site.
+title: Portfolio
 
 plugins:
   - jekyll-remote-theme

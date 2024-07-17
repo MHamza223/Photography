@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="description"
+    content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Photography/favicon.ico">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic%7COpen+Sans:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="/Photography/css/main.css" />
+  <link rel="canonical" href="http://localhost:4000/Photography/BlogBox-Jekyll-Theme-master/BlogBox-Jekyll-Theme-master/">
+  <link rel="alternate" type="application/rss+xml" title="Portfolio Feed"
+    href="http://localhost:4000/Photography/feed.xml">
+</head>
+
+<body class="fixed-nav">
+  <div id="page" class="site">
+    <nav class="site-nav" aria-label="Main Menu">
+    <div class="inner">
+        <div id="nav-menu" class="nav-menu">
+            <ul class="menu">
+                <li><a href="/Photography/">Home</a></li>
+                <li><a href="/Photography/contact/">Contact</a></li>
+            </ul>
+        </div><!-- .nav-menu -->
+        <a id="search-open" class="search-toggle">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="screen-reader-text">Search</span>
+        </a>
+    </div><!-- .inner -->
+</nav><!-- .site-nav -->
+
+<header class="site-header fade-in-down delay-0_5s">
+    <div class="inner">
+        
+        <h1 class="site-title">
+            <a href="/Photography/" rel="home">Portfolio</a>
+        </h1>
+        <p class="site-description"></p>
+    </div><!-- .inner -->
+</header><!-- .site-header -->
+
+<!-- In your _includes/head.html -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<section class="site-search" role="search">
+		<div class="search-scrollable">
+			<div class="search-box">
+				<div class="search-box-inside">
+					<h2 class="screen-reader-text">Search </h2>
+					<form class="search-form">
+						<label class="screen-reader-text">Search for:</label>
+						<input type="text" id="search-field" class="search-field" placeholder="Type your keywords&hellip;" />
+						<input type="submit" class="search-submit screen-reader-text" value="Search" />
+					</form>
+					<ul id="search-results" class="search-results"></ul>
+				</div><!-- .search-box-inside -->
+				<button id="search-close" class="search-toggle"><span class="close-icon" aria-hidden="true"></span><span class="screen-reader-text">Close</span></button>
+			</div><!-- .search-box -->
+		</div><!-- .search-scrollable -->
+</section><!-- .site-search -->
+
+
+    <main class="content fade-in-down delay-0_75s">
+    <div class="inner">
+        
+        
+    </div><!-- .inner -->
+</main><!-- .content -->
+
+
+
+
+  <script type="text/javascript" src="/Photography/js/plugins.js"></script>
+  <script type="text/javascript" src="/Photography/js/custom.js"></script>
+
+  <script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-field'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/Photography/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a> <span class="entry-meta"><time class="post-date" datetime="{date}">{date}</time></span></li>',
+      noResultsText: 'No results found',
+      limit: 15,
+      fuzzy: false,
+      exclude: ['Welcome']
+    })
+  </script>
+
+</body>
+
+</html>

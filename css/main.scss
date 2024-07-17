@@ -64,7 +64,10 @@
 }
 
 .site-nav .inner {
-    position: relative;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .nav-menu {
@@ -293,20 +296,24 @@ ul.search-results {
 }
 
 .site-title {
-    font: bold 34px/1.2 $heading-font;
-    letter-spacing: -1px;
-    margin: 0;
-    a {
-        background-color: $accent-color;
-        color: #fff;
-        display: inline-block;
-        padding: 15px 30px;
-        text-decoration: none;
-        &:hover {
-            background-color: #606669;
-        }
-    }
+    font-family: 'Font Name', sans-serif; /* Replace with your chosen elegant font */
+    font-size: 70px; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff; /* White text for dark background */
 }
+
+.site-title a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    transition: color 0.3s;
+}
+
+.site-title a:hover {
+    color: #ccc; /* Lighter grey on hover */
+}
+
 
 .site-description {
     color: #aeb0b1;

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>About this blog</title>
+  <meta name="description"
+    content="An optional about page for BlogBox Jekyll theme">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Photography/favicon.ico">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic%7COpen+Sans:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="/Photography/css/main.css" />
+  <link rel="canonical" href="http://localhost:4000/Photography/BlogBox-Jekyll-Theme-master/BlogBox-Jekyll-Theme-master/about.html">
+  <link rel="alternate" type="application/rss+xml" title="Portfolio Feed"
+    href="http://localhost:4000/Photography/feed.xml">
+</head>
+
+<body class="fixed-nav">
+  <div id="page" class="site">
+    <nav class="site-nav" aria-label="Main Menu">
+    <div class="inner">
+        <div id="nav-menu" class="nav-menu">
+            <ul class="menu">
+                <li><a href="/Photography/">Home</a></li>
+                <li><a href="/Photography/contact/">Contact</a></li>
+            </ul>
+        </div><!-- .nav-menu -->
+        <a id="search-open" class="search-toggle">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="screen-reader-text">Search</span>
+        </a>
+    </div><!-- .inner -->
+</nav><!-- .site-nav -->
+
+<header class="site-header fade-in-down delay-0_5s">
+    <div class="inner">
+        
+        <h1 class="site-title">
+            <a href="/Photography/" rel="home">Portfolio</a>
+        </h1>
+        <p class="site-description"></p>
+    </div><!-- .inner -->
+</header><!-- .site-header -->
+
+<!-- In your _includes/head.html -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<section class="site-search" role="search">
+		<div class="search-scrollable">
+			<div class="search-box">
+				<div class="search-box-inside">
+					<h2 class="screen-reader-text">Search </h2>
+					<form class="search-form">
+						<label class="screen-reader-text">Search for:</label>
+						<input type="text" id="search-field" class="search-field" placeholder="Type your keywords&hellip;" />
+						<input type="submit" class="search-submit screen-reader-text" value="Search" />
+					</form>
+					<ul id="search-results" class="search-results"></ul>
+				</div><!-- .search-box-inside -->
+				<button id="search-close" class="search-toggle"><span class="close-icon" aria-hidden="true"></span><span class="screen-reader-text">Close</span></button>
+			</div><!-- .search-box -->
+		</div><!-- .search-scrollable -->
+</section><!-- .site-search -->
+
+
+    <main class="content fade-in-down delay-0_75s">
+    <div class="inner">
+        <article class="post">
+            
+            <div class="post-thumbnail"><img src="/Photography/images/aboutPage.jpg" alt="About this blog" /></div>
+            
+            <div class="entry-box">
+                <header class="entry-header">
+                    <h1 class="entry-title">About this blog</h1>
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    <p>My name is John Doe. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 5 years.</p>
+
+<p>Welcome to my blog and I absolutely appreciate you stopping by! On December 25th, 2001, I left the Canada for a four months, trip to Asia. The idea was to backpack around China, Thailand, Vietnam and Cambodia and then return home and start a career in the IT industry.</p>
+
+<p>When I landed in Bangkok, I had $3500 USD to my name and that was it. I booked a bed in a old guesthouse in the center of the city for about a dollar per night and let the adventure begin.</p>
+
+<blockquote>
+  <p>“To live is the rarest thing in the world. Most people exist, that is all.” <cite>― Oscar Wilde ―</cite></p>
+</blockquote>
+
+<p>In the end, I never went home after those three months. And it’s now been over 14 years and that trip has still yet to finish.</p>
+
+<p>The adventure has involved over 75+ countries on 5 continents as I’ve worked, lived, traveled and volunteered all over the planet.</p>
+
+<p>Through my own adventures – from the incredible moments and rewarding interactions to the struggles and major challenges – I aim to provide a realistic and honest account of what long-term travel is truly about and how you can work on achieving such a goal yourself.</p>
+
+<p>While the recognition and mentions this blog has received over the years are certainly nice, nothing compares to an email from a reader telling me that the blog helped them achieve their own travel goals.</p>
+
+<p><em>Thank You for reading!</em></p>
+
+                </div><!-- .entry-content -->
+            </div><!-- .entry-box -->
+        </article><!-- .post -->
+    </div><!-- .inner -->
+</main><!-- .content -->
+
+
+
+
+  <script type="text/javascript" src="/Photography/js/plugins.js"></script>
+  <script type="text/javascript" src="/Photography/js/custom.js"></script>
+
+  <script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-field'),
+      resultsContainer: document.getElementById('search-results'),
+      json: '/Photography/search.json',
+      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a> <span class="entry-meta"><time class="post-date" datetime="{date}">{date}</time></span></li>',
+      noResultsText: 'No results found',
+      limit: 15,
+      fuzzy: false,
+      exclude: ['Welcome']
+    })
+  </script>
+
+</body>
+
+</html>
