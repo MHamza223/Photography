@@ -1,27 +1,23 @@
 ---
 layout: default
-title: "Wedding"
-permalink: /categories/Wedding/
+title: "Party"
+permalink: /categories/Party/
 images:
-  - /Photography/WeddingImages/DSC04532.jpeg
-  - /Photography/WeddingImages/DSC04547.JPG
-  - /Photography/WeddingImages/DSC04549.JPG
-  - /Photography/WeddingImages/DSC04559.JPG
-  - /Photography/WeddingImages/DSC04566.JPG
-  - /Photography/WeddingImages/DSC04570.jpeg
-  - /Photography/WeddingImages/DSC04586.JPG
-  - /Photography/WeddingImages/DSC04588.JPG
-  - /Photography/WeddingImages/DSC04591.JPG
-  - /Photography/WeddingImages/DSC04597.JPG
-  - /Photography/WeddingImages/DSC04600.JPG
-  - /Photography/WeddingImages/DSC04612.JPG
-  - /Photography/WeddingImages/DSC04639.JPG
-  - /Photography/WeddingImages/DSC04691.JPG
-  - /Photography/WeddingImages/DSC04696.JPG
-  - /Photography/WeddingImages/DSC04714.JPG
-  - /Photography/WeddingImages/DSC04721.JPG
-  - /Photography/WeddingImages/DSC04981.JPG
-  - /Photography/WeddingImages/DSC05036.JPG
+  - /Photography/PartyImages/DSC03913.JPG
+  - /Photography/PartyImages/DSC03918.JPG
+  - /Photography/PartyImages/DSC03972 (1).JPG
+  - /Photography/PartyImages/DSC03980 (1).JPG
+  - /Photography/PartyImages/DSC04029.JPG
+  - /Photography/PartyImages/DSC04098 (1).JPG
+  - /Photography/PartyImages/DSC05053.JPG
+  - /Photography/PartyImages/DSC05174.JPG
+  - /Photography/PartyImages/DSC05187.JPG
+  - /Photography/PartyImages/DSC05241 (1).JPG
+  - /Photography/PartyImages/DSC05276.JPG
+  - /Photography/PartyImages/DSC05313.JPG
+  - /Photography/PartyImages/DSC05383.JPG
+  - /Photography/PartyImages/DSC05391.JPG
+  - /Photography/PartyImages/DSC05442.JPG
 
 
 ---
@@ -30,7 +26,7 @@ images:
     {% for image in page.images %}
         <div class="category">
             <a href="{{ image }}" >
-                <img src="{{ image }}" alt="Wedding">
+                <img src="{{ image }}" alt="Portrait">
             </a>
         </div>
     {% endfor %}
@@ -56,8 +52,8 @@ images:
 
 @media (max-width: 768px) {
   .category {
-    flex: 1 1 calc(80% - 20px); /* Full width on smaller screens */
-    max-width: calc(80% - 20px);
+    flex: 1 1 calc(90% - 20px); /* Full width on smaller screens */
+    max-width: calc(90% - 20px);
   }
 }
 

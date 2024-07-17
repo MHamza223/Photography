@@ -14,9 +14,9 @@ title: "Home"
 
 
   <div class="Portrait ">
-    <a href="{{ '/categories/portraits/' | relative_url }}">
+    <a href="{{ '/categories/Portrait/' | relative_url }}">
       <h2>Portraits</h2>
-      <img src="{{ '/PortraitImages/WhatsApp Image 2024-04-28 at 15.14.09_8fc52d74.jpg' | relative_url }}" alt="Events">
+      <img src="{{ '/PortraitImages/WhatsApp Image 2024-04-28 at 15.14.09_8fc52d74.jpg' | relative_url }}" alt="Portrait">
     </a>
   </div>
 

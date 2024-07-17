@@ -1,28 +1,17 @@
 ---
 layout: default
-title: "Wedding"
-permalink: /categories/Wedding/
+title: "Portrait"
+permalink: /categories/Portrait/
 images:
-  - /Photography/WeddingImages/DSC04532.jpeg
-  - /Photography/WeddingImages/DSC04547.JPG
-  - /Photography/WeddingImages/DSC04549.JPG
-  - /Photography/WeddingImages/DSC04559.JPG
-  - /Photography/WeddingImages/DSC04566.JPG
-  - /Photography/WeddingImages/DSC04570.jpeg
-  - /Photography/WeddingImages/DSC04586.JPG
-  - /Photography/WeddingImages/DSC04588.JPG
-  - /Photography/WeddingImages/DSC04591.JPG
-  - /Photography/WeddingImages/DSC04597.JPG
-  - /Photography/WeddingImages/DSC04600.JPG
-  - /Photography/WeddingImages/DSC04612.JPG
-  - /Photography/WeddingImages/DSC04639.JPG
-  - /Photography/WeddingImages/DSC04691.JPG
-  - /Photography/WeddingImages/DSC04696.JPG
-  - /Photography/WeddingImages/DSC04714.JPG
-  - /Photography/WeddingImages/DSC04721.JPG
-  - /Photography/WeddingImages/DSC04981.JPG
-  - /Photography/WeddingImages/DSC05036.JPG
-
+  - /Photography/PortraitImages/DSC04397.JPG
+  - /Photography/PortraitImages/DSC04429.JPG
+  - /Photography/PortraitImages/DSC04457.JPG
+  - /Photography/PortraitImages/ITWKE4037.JPG
+  - /Photography/PortraitImages/KQYQE5493.JPG
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.11.26_ae98f6c5.JPG
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.05_ab1453ac.JPG
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.30_4a3a4873.JPG
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.14.09_8fc52d74.JPG
 
 ---
 
@@ -30,7 +19,7 @@ images:
     {% for image in page.images %}
         <div class="category">
             <a href="{{ image }}" >
-                <img src="{{ image }}" alt="Wedding">
+                <img src="{{ image }}" alt="Portrait">
             </a>
         </div>
     {% endfor %}

@@ -18,36 +18,54 @@
 
 <body class="fixed-nav">
   <div id="page" class="site">
-    <nav class="site-nav" aria-label="Main Menu">
-    <div class="inner">
-        <div id="nav-menu" class="nav-menu">
-            <ul class="menu">
-                <li><a href="/Photography/">Home</a></li>
-                <li><a href="/Photography/contact/">Contact</a></li>
-            </ul>
-        </div><!-- .nav-menu -->
-        <a id="search-open" class="search-toggle">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <span class="screen-reader-text">Search</span>
-        </a>
-    </div><!-- .inner -->
-</nav><!-- .site-nav -->
+    <!DOCTYPE html>
+<html lang="en-US">
 
-<header class="site-header fade-in-down delay-0_5s">
-    <div class="inner">
-        
-        <h1 class="site-title">
-            <a href="/Photography/" rel="home">Portfolio</a>
-        </h1>
-        <p class="site-description"></p>
-    </div><!-- .inner -->
-</header><!-- .site-header -->
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Photography/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic%7COpen+Sans:400,700,400italic,700italic" />
+    <link rel="stylesheet" href="/Photography/css/main.css" />
+    <link rel="canonical" href="http://localhost:4000/Photography/">
+    <link rel="alternate" type="application/rss+xml" title="Portfolio Feed" href="http://localhost:4000/Photography/feed.xml">
+</head>
 
-<!-- In your _includes/head.html -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<body class="fixed-nav">
+    <div id="page" class="site">
 
-<section class="site-search" role="search">
+
+        <nav>
+            <button class="mobile-dropdown-toggle" aria-hidden="true" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-link-container" id="nav-links">
+                <a href="/Photography/" rel="home">Home</a>
+                <a href="/work">Contact</a>
+                <!-- Add more links as needed -->
+            </div>
+        </nav>
+
+
+
+
+        <header class="site-header fade-in-down delay-0_5s">
+            <div class="inner">
+                
+                <h1 class="site-title">
+                    <a href="/Photography/" rel="home">Portfolio</a>
+                </h1>
+                <p class="site-description"></p>
+            </div><!-- .inner -->
+        </header><!-- .site-header -->
+
+        <!-- In your _includes/head.html -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+        <section class="site-search" role="search">
 		<div class="search-scrollable">
 			<div class="search-box">
 				<div class="search-box-inside">
@@ -65,9 +83,39 @@
 </section><!-- .site-search -->
 
 
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.nav-menu ul');
+                menu.classList.toggle('show');
+            }
+        </script>
+
+        <!-- Add your other HTML content here -->
+
+        <script type="text/javascript" src="/Photography/js/plugins.js"></script>
+        <script type="text/javascript" src="/Photography/js/custom.js"></script>
+
+        <script>
+            window.simpleJekyllSearch = new SimpleJekyllSearch({
+                searchInput: document.getElementById('search-field'),
+                resultsContainer: document.getElementById('search-results'),
+                json: '/Photography/search.json',
+                searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a> <span class="entry-meta"><time class="post-date" datetime="{date}">{date}</time></span></li>',
+                noResultsText: 'No results found',
+                limit: 15,
+                fuzzy: false,
+                exclude: ['Welcome']
+            })
+        </script>
+
+    </div>
+</body>
+
+</html>
+
     <div class="categories">
   <div class="category">
-    <a href="/Photography/categories/wedding/">
+    <a href="/Photography/categories/Wedding/">
       <h2>Wedding</h2>
       <img src="/Photography/WeddingImages/DSC04696.jpg" alt="Wedding" />
     </a>
@@ -76,9 +124,9 @@
 
 
   <div class="Portrait ">
-    <a href="/Photography/categories/portraits/">
+    <a href="/Photography/categories/Portrait/">
       <h2>Portraits</h2>
-      <img src="/Photography/PortraitImages/WhatsApp%20Image%202024-04-28%20at%2015.14.09_8fc52d74.jpg" alt="Events" />
+      <img src="/Photography/PortraitImages/WhatsApp%20Image%202024-04-28%20at%2015.14.09_8fc52d74.jpg" alt="Portrait" />
     </a>
   </div>
 
