@@ -24,20 +24,6 @@ images:
   - /Photography/WeddingImages/DSC05036.JPG
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 <div class="category-images">
