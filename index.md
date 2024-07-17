@@ -25,7 +25,7 @@ title: "Home"
   <div class="Party">
     <a href="{{ '/categories/Party/' | relative_url }}">
       <h2>Party</h2>
-      <img src="{{ '/PartyImages/DSC05241 (1)JPG' | relative_url }}" alt="Party">
+      <img src="{{ '/PartyImages/DSC05241 (1).JPG' | relative_url }}" alt="Party">
     </a>
   </div>
   <!-- Add more categories as needed -->
