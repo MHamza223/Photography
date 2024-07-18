@@ -56,7 +56,7 @@
     justify-content: space-between;
     margin: auto;
     padding: 30px 30px;
-    background: #333; /* Dark background for the navbar */
+    background: #000000; /* Dark background for the navbar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
   
@@ -223,7 +223,7 @@ ul.search-results {
 }
 
 .search-results li {
-    border-bottom: 1px solid #30373d;
+    border-bottom: 1px solid #ebedef;
     padding-bottom: 15px;
     padding-top: 10px;
     a {
@@ -253,22 +253,23 @@ ul.search-results {
 }
 
 .site-title {
-    font-family: 'Font Name', sans-serif; /* Replace with your chosen elegant font */
-    font-size: 70px; /* Adjust size as needed */
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    color: #fff; /* White text for dark background */
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Adjust line-height to reduce space above and below */
 }
 
 .site-title a {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.5em;
+    color: #000403; /* Adjust color as needed */
     text-decoration: none;
-    color: #fff; /* White text */
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    margin: 0;
+    padding: 0;
 }
 
 .site-title a:hover {
-    color: #ccc; /* Lighter grey on hover */
+    color: #097e6d; /* Adjust hover color as needed */
 }
 
 
@@ -284,7 +285,7 @@ ul.search-results {
  */
 
 .post {
-    background: #3a494d;
+    background: #000000;
     margin-bottom: 60px;
 }
 
@@ -301,7 +302,7 @@ ul.search-results {
     font-size: 38px;
     margin: 0 0 12px;
     a {
-        color: #30373d;
+        color: #ffffff;
         text-decoration: none;
         &:hover {
             color: $accent-color;
@@ -442,7 +443,7 @@ ul.search-results {
 .archive-top-link {
     background-color: #f2f2f2;
     border-radius: 2px;
-    color: #606669;
+    color: #f7fbfd;
     display: inline-block;
     font: 14px/1.5 $alt-font;
     margin: 0 2px 6px 0;
@@ -508,7 +509,7 @@ ul.search-results {
 
 .pagination a,
 .post-nav a {
-    background-color: #606669;
+    background-color: #000000;
     border-radius: 2px;
     color: #f2f5f7;
     padding: 8px 25px;
@@ -554,7 +555,7 @@ ul.search-results {
 }
 
 .footer-columns {
-    border-bottom: 3px solid #30373d;
+    border-bottom: 3px solid #000000;
     padding-top: 45px;
     padding-bottom: 30px;
 }
@@ -608,8 +609,8 @@ ul.search-results {
 }
 
 .widget-recent-posts li {
-    border-bottom: 2px solid #30373d;
-    color: #606669;
+    border-bottom: 2px solid #fcfcfc;
+    color: #f1f3f4;
     margin-bottom: 15px;
     padding-bottom: 15px;
     position: relative;
@@ -644,7 +645,7 @@ ul.search-results {
 }
 
 .widget-tags a {
-    background-color: #30373d;
+    background-color: #f8fcff;
     border-radius: 2px;
     color: #aeb0b1;
     display: inline-block;
@@ -679,7 +680,7 @@ ul.search-results {
 .social-links {
     margin-bottom: 30px;
     a {
-        color: #606669;
+        color: #fafafa;
         display: inline-block;
         font-size: 16px;
         height: 24px;
@@ -691,7 +692,7 @@ ul.search-results {
 }
 
 .copyright {
-    color: #606669;
+    color: #fdfeff;
     font-size: 14px;
     line-height: 1.5;
     a {
@@ -797,7 +798,7 @@ ul.search-results {
         padding-right: 0;
     }
     .nav-menu li {
-        border-bottom: 2px solid #30373d;
+        border-bottom: 2px solid #e9edf0;
         float: none;
         padding: 0;
     }

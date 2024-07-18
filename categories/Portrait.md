@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Portrait"
 permalink: /categories/Portrait/
 images:

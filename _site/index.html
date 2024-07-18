@@ -31,11 +31,12 @@
     <link rel="stylesheet" href="/Photography/css/main.css" />
     <link rel="canonical" href="http://localhost:4000/Photography/">
     <link rel="alternate" type="application/rss+xml" title="Portfolio Feed" href="http://localhost:4000/Photography/feed.xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="fixed-nav">
     <div id="page" class="site">
-
 
         <nav>
             <button class="mobile-dropdown-toggle" aria-hidden="true" onclick="toggleMenu()">
@@ -48,14 +49,11 @@
             </div>
         </nav>
 
-
-
-
         <header class="site-header fade-in-down delay-0_5s">
             <div class="inner">
                 
                 <h1 class="site-title">
-                    <a href="/Photography/" rel="home">Portfolio</a>
+                    <a href="/Photography/" rel="home">M.A Photography</a>
                 </h1>
                 <p class="site-description"></p>
             </div><!-- .inner -->
@@ -117,25 +115,19 @@
   <div class="category">
     <a href="/Photography/categories/Wedding/">
       <h2>Wedding</h2>
-      <img src="/Photography/WeddingImages/DSC04696.jpg" alt="Wedding" />
+      <img src="/Photography/WeddingImages/DSC04696.JPG" alt="Wedding" />
     </a>
   </div>
-
-
-
-  <div class="Portrait ">
+  <div class="category">
     <a href="/Photography/categories/Portrait/">
       <h2>Portraits</h2>
       <img src="/Photography/PortraitImages/WhatsApp%20Image%202024-04-28%20at%2015.14.09_8fc52d74.jpg" alt="Portrait" />
     </a>
   </div>
-
-
-
-  <div class="Party">
+  <div class="category">
     <a href="/Photography/categories/Party/">
       <h2>Party</h2>
-      <img src="/Photography/PartyImages/DSC05241%20(1).jpg" alt="Party" />
+      <img src="/Photography/PartyImages/DSC05241%20(1).JPG" alt="Party" />
     </a>
   </div>
   <!-- Add more categories as needed -->
@@ -143,146 +135,71 @@
 
 <style>
   .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Center the categories */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the categories */
+}
 
+.category {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+@media (max-width: 991.98px) {
   .category {
-    position: relative;
-    overflow: hidden;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    box-sizing: border-box;
-    margin: 10px;
-    transition: transform 0.3s;
+    flex: 1 1 calc(50% - 20px); /* Adjust width for tablets */
+    max-width: calc(50% - 20px);
   }
+}
 
-  .category:hover {
-    transform: scale(1.05);
+@media (max-width: 575.98px) {
+  .category {
+    flex: 1 1 calc(50% - 20px); /* Two columns on smaller screens */
+    max-width: calc(50% - 20px);
   }
+}
 
-  .category img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-  }
+.category:hover {
+  transform: scale(1.05);
+}
 
-  .category:hover img {
-    transform: scale(1.1);
-  }
+.category img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
 
-  .category h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5em;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-  }
+.category:hover img {
+  transform: scale(1.1);
+}
 
-  .category:hover h2 {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+.category h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
 
-  .Portrait {
-    position: relative;
-    overflow: hidden;
-    flex: 1 1 calc(33.333% - 10px);
-    max-width: calc(33.333% - 10px);
-    box-sizing: border-box;
-    margin: 10px;
-    transition: transform 0.3s;
-  }
+.category:hover h2 {
+    background: #000000; /* Dark background for the navbar */
+}
 
-  .Portrait:hover {
-    transform: scale(1.05);
-  }
-
-  .Portrait img {
-    width: 100%; /* Ensure the image takes up the full width of its container */
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-  }
-
-  .Portrait:hover img {
-    transform: scale(1.1);
-  }
-
-  .Portrait h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5em;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-  }
-
-  .Portrait:hover h2 {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .Party {
-    position: relative;
-    overflow: hidden;
-    flex: 1 1 calc(50% - 20px); /* Make the Party category take more space */
-    max-width: calc(50% - 20px); /* Ensure it scales up to a larger size */
-    box-sizing: border-box;
-    margin: 10px;
-    transition: transform 0.3s;
-  }
-
-  .Party:hover {
-    transform: scale(1.05);
-  }
-
-  .Party img {
-    width: 100%; /* Ensure the image takes up the full width of its container */
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-  }
-
-  .Party:hover img {
-    transform: scale(1.1);
-  }
-
-  .Party h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5em;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-  }
-
-  .Party:hover h2 {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
 </style>
 
 
