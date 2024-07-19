@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home</title>
+  <title>Portfolio</title>
   <meta name="description"
     content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic%7COpen+Sans:400,700,400italic,700italic" />
   <link rel="stylesheet" href="/Photography/css/main.css" />
-  <link rel="canonical" href="http://localhost:4000/Photography/">
+  <link rel="canonical" href="http://localhost:4000/Photography/contact/">
   <link rel="alternate" type="application/rss+xml" title="Portfolio Feed"
     href="http://localhost:4000/Photography/feed.xml">
 </head>
@@ -57,105 +57,45 @@
 </body>
 </html>
 
-    <div class="categories">
-  <div class="category">
-    <a href="/Photography/categories/Wedding/">
-      <h2>Wedding</h2>
-      <img src="/Photography/WeddingImages/DSC04696.JPG" alt="Wedding" />
-    </a>
-  </div>
-
-
-  <div class="category">
-    <a href="/Photography/categories/Party/">
-      <h2>Party</h2>
-      <img src="/Photography/PartyImages/DSC05187.JPG" alt="Party" />
-    </a>
-  </div>
-
-  
-  <div class="category">
-    <a href="/Photography/categories/Portrait/">
-      <h2>Portraits</h2>
-      <img src="/Photography/PortraitImages/WhatsApp%20Image%202024-04-28%20at%2015.14.09_8fc52d74.jpg" alt="Portrait" />
-    </a>
-  </div>
-  
-  <!-- Add more categories as needed -->
-</div>
+    <main class="content fade-in-down delay-0_75s">
+    <div class="inner">
+        <article class="post">
+            
+            <div class="entry-box">
+                <header class="entry-header">
+                    <h1 class="entry-title"></h1>
+                </header><!-- .entry-header -->
+                <div class="entry-content">
+                    <h1 class="contact">Get in Touch</h1>
+<p>If you have any questions or would like to get a quote, please contact via email:</p>
+<p><a href="mailto:mo.a.photoz@gmail.com" class="contact-email">mo.a.photoz@example.com</a></p>
 
 <style>
- .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Center the categories */
-    padding-top: 200px; /* Add top padding to move the images down */
+.contact{
+        color: rgb(128, 128, 128);
 
 }
-
-.category {
-    position: relative;
-    overflow: hidden;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    margin: 10px;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the category */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    background-color: #fff; /* White background for the category */
+    .contact-email {
+        color: #40b9bd; /* Ensure the text color is consistent */
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
 }
 
-@media (max-width: 991.98px) {
-    .category {
-        flex: 1 1 calc(50% - 20px); /* Adjust width for tablets */
-        max-width: calc(50% - 20px);
-    }
+.contact-email:hover {
+    text-decoration: underline; /* Underline on hover */
+        color: #fff;
 }
 
-@media (max-width: 575.98px) {
-    .category {
-        flex: 1 1 calc(70% - 20px); /* Two columns on smaller screens */
-        max-width: calc(70% - 20px);
-    }
-}
 
-.category:hover {
-    transform: scale(1.05);
-}
-
-.category img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-}
-
-.category:hover img {
-    transform: scale(1.1);
-}
-
-.category h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    font-size: 1.5em;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-}
-
-.category:hover h2 {
-    background-color: rgba(0, 0, 0, 0.7);
-}
 </style>
 
+
+                </div><!-- .entry-content -->
+            </div><!-- .entry-box -->
+        </article><!-- .post -->
+    </div><!-- .content-inner -->
+</main><!-- .content -->
 
 
 

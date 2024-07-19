@@ -8,10 +8,10 @@ images:
   - /Photography/PortraitImages/DSC04457.JPG
   - /Photography/PortraitImages/ITWKE4037.JPG
   - /Photography/PortraitImages/KQYQE5493.JPG
-  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.11.26_ae98f6c5.JPG
-  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.05_ab1453ac.JPG
-  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.30_4a3a4873.JPG
-  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.14.09_8fc52d74.JPG
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.11.26_ae98f6c5.jpg
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.05_ab1453ac.jpg
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.13.30_4a3a4873.jpg
+  - /Photography/PortraitImages/WhatsApp Image 2024-04-28 at 15.14.09_8fc52d74.jpg
 
 ---
 
@@ -31,22 +31,26 @@ images:
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center; /* Center the categories */
+        padding-top: 50px; /* Add top padding to move the images down */
+
 }
 
 .category {
   position: relative;
   overflow: hidden;
-  flex: 1 1 calc(50% - 20px); /* Increased size to 50% width */
-  max-width: calc(50% - 20px); /* Ensure it scales up to a larger size */
+  flex: 1 1 calc(80% - 20px); /* Increased size to 50% width */
+  max-width: calc(80% - 20px); /* Ensure it scales up to a larger size */
   box-sizing: border-box;
   margin: 10px;
   transition: transform 0.3s;
+  
 }
+
 
 @media (max-width: 768px) {
   .category {
-    flex: 1 1 calc(80% - 20px); /* Full width on smaller screens */
-    max-width: calc(80% - 20px);
+    flex: 1 1 calc(90% - 20px); /* Full width on smaller screens */
+    max-width: calc(90% - 20px);
   }
 }
 

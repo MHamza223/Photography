@@ -38,16 +38,20 @@ images:
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center; /* Center the categories */
+        padding-top: 50px; /* Add top padding to move the images down */
+
 }
 
 .category {
   position: relative;
   overflow: hidden;
-  flex: 1 1 calc(50% - 20px); /* Increased size to 50% width */
-  max-width: calc(50% - 20px); /* Ensure it scales up to a larger size */
+  flex: 1 1 calc(800% - 20px); /* Increased size to 50% width */
+  max-width: calc(800% - 20px); /* Ensure it scales up to a larger size */
   box-sizing: border-box;
   margin: 10px;
   transition: transform 0.3s;
+      
+
 }
 
 @media (max-width: 768px) {
@@ -66,6 +70,7 @@ images:
   height: auto;
   display: block;
   transition: transform 0.3s;
+  
 }
 
 .category:hover img {

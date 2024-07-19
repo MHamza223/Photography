@@ -1,82 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/Photography/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic%7COpen+Sans:400,700,400italic,700italic" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poiret+One|Open+Sans:400,700,400italic,700italic" />
     <link rel="stylesheet" href="/Photography/css/main.css" />
     <link rel="canonical" href="http://localhost:4000/Photography/">
     <link rel="alternate" type="application/rss+xml" title="Portfolio Feed" href="http://localhost:4000/Photography/feed.xml">
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-
 </head>
-
 <body class="fixed-nav">
     <div id="page" class="site">
-
-        <nav>
-            <button class="mobile-dropdown-toggle" aria-hidden="true" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="dropdown-link-container" id="nav-links">
-                <a href="/Photography/" rel="home">Home</a>
-                <a href="/work">Contact</a>
-                <!-- Add more links as needed -->
-            </div>
-        </nav>
-
-        <header class="site-header fade-in-down delay-0_5s">
+        <header class="site-header">
             <div class="inner">
-                {% if site.logo != null %}
-                <p class="site-logo">
-                    <a href="{{ site.baseurl }}/" rel="home">
-                        <img src="{{ site.baseurl }}/images/{{ site.logo }}" width="200" alt="{{ site.title }} logo" />
-                    </a>
-                </p>
-                {% endif %}
-                <h1 class="site-title">
-                    <a href="{{ site.baseurl }}/" rel="home">M.A Photography</a>
-                </h1>
-                <p class="site-description">{{ site.tagline }}</p>
-            </div><!-- .inner -->
-        </header><!-- .site-header -->
-
-        <!-- In your _includes/head.html -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-        {% include search.html %}
-
+                <div class="site-title-container">
+                    <a href="/Photography/" class="site-title">M.A Photography</a>
+                </div>
+                <button class="mobile-dropdown-toggle" onclick="toggleDropdown()">☰</button>
+                <nav id="site-nav" class="dropdown-link-container">
+                    <a href="/Photography/">Home</a>
+                    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+                    <!-- Add more navigation links as needed -->
+                </nav>
+            </div>
+        </header>
+        
         <script>
-            function toggleMenu() {
-                const menu = document.querySelector('.nav-menu ul');
-                menu.classList.toggle('show');
+            function toggleDropdown() {
+                document.getElementById('site-nav').classList.toggle('show');
             }
         </script>
-
-        <!-- Add your other HTML content here -->
-
-        <script type="text/javascript" src="/Photography/js/plugins.js"></script>
-        <script type="text/javascript" src="/Photography/js/custom.js"></script>
-
-        <script>
-            window.simpleJekyllSearch = new SimpleJekyllSearch({
-                searchInput: document.getElementById('search-field'),
-                resultsContainer: document.getElementById('search-results'),
-                json: '/Photography/search.json',
-                searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a> <span class="entry-meta"><time class="post-date" datetime="{date}">{date}</time></span></li>',
-                noResultsText: 'No results found',
-                limit: 15,
-                fuzzy: false,
-                exclude: ['Welcome']
-            })
-        </script>
-
+        
     </div>
 </body>
-
 </html>

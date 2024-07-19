@@ -72,11 +72,13 @@ nav .dropdown-link-container > a {
 }
 
 nav .dropdown-link-container > a:hover {
-    color: #66b7c6; /* Accent color on hover */
-    border-bottom: 2px solid #66b7c6; /* Border color change on hover */
+    color: #26e9d2; /* Accent color on hover */
+    border-bottom: 2px solid #01505e; /* Border color change on hover */
 }
   
   .mobile-dropdown-toggle {
+    color: #26e9d2; /* Accent color on hover */
+
     display: none; /* hide our hamburger button until we're on mobile */
   }
 
@@ -236,94 +238,253 @@ ul.search-results {
  * ----------------------------------------
  */
 
+/**
+ * Site Header
+ * ----------------------------------------
+ */
+
+/* General styles for the site header */
+/* General styles for the site header */
 .site-header {
     text-align: center;
-    .inner {
-        padding-bottom: 72px;
-        padding-top: 60px;
-    }
+    background: rgba(0, 0, 0, 0.9); /* Lightly transparent background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0; /* Default padding */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
 }
 
-.fixed-nav .site-header {
-    padding-top: 48px;
+.site-header .inner {
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.site-logo {
-    margin-bottom: 0;
+
+
+.site-title-container {
+    display: flex;
+    align-items: center;
 }
 
 .site-title {
-    margin: 0;
-    padding: 0;
-    line-height: 1; /* Adjust line-height to reduce space above and below */
-}
-
-.site-title a {
-    font-family: 'Poiret One', cursive;
-    font-size: 1.5em;
-    color: #000403; /* Adjust color as needed */
+    font-family: 'Poiret One', cursive; /* Elegant and modern font */
+    font-size: 1.5em; /* Adjust font size */
+    color: #f8f6f6;
+    
     text-decoration: none;
-    transition: color 0.3s ease;
-    margin: 0;
-    padding: 0;
+    margin-left: 10px; /* Adjust margin */
+    transition: color 0.3s; /* Add transition for smooth color change */
+
+}
+.site-title:hover {
+    font-weight: bold; /* Make the text bold */
+
+    color: #83cbcb; /* Change to desired hover color */
 }
 
-.site-title a:hover {
-    color: #097e6d; /* Adjust hover color as needed */
+nav {
+    display: flex;
+    align-items: center;
 }
 
-
-.site-description {
-    color: #aeb0b1;
-    font: 14px/1.5 $alt-font;
-    margin: 8px 0 0;
+nav a {
+    font-family: 'Poiret One', cursive; /* Elegant and modern font */
+    font-size: 1em; /* Default font size */
+    font-weight: bold; /* Make the text bold */
+    color: #15686b; /* Default text color for links */
+    text-decoration: none;
+    margin: 0 10px; /* Default margin */
+    padding: 2px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 1px solid transparent; /* Default underline effect */
 }
+
+nav a:hover {
+    color: #83cbcb;
+    border-bottom: 1px solid #000; /* Underline effect on hover */
+}
+
+/* Body background color */
+body {
+    background-color: #191a1a; /* Light gray background */
+}
+/* Mobile menu toggle */
+.mobile-dropdown-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #15686b;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 5px 0; /* Reduce padding for tablets */
+    }
+
+    .site-title {
+        font-size: 1.3em; /* Adjust font size for tablets */
+        margin-left: 5px; /* Adjust margin for tablets */
+    }
+
+    .mobile-dropdown-toggle {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    nav {
+        display: none; /* Hide nav items by default on smaller screens */
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(-10px); /* Start slightly above */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    }
+
+    nav.show {
+        display: flex; /* Show nav items when 'show' class is added */
+        opacity: 1;
+        transform: translateY(0); /* Slide down to the original position */
+    }
+
+    nav a {
+        font-size: 0.9em; /* Adjust font size for tablets */
+        margin: 5px 0; /* Adjust margin for tablets */
+        border-bottom: 1px solid transparent; /* Ensure underline visibility */
+        opacity: 1;
+    }
+    nav a:hover {
+        color: #949190; /* Text color on hover for smaller screens */
+    } 
+}
+
+@media (max-width: 576px) {
+    .site-header {
+        padding: 3px 0; /* Further reduce padding for very small screens */
+    }
+
+    .site-title {
+        font-size: 1.2em; /* Further adjust font size for very small screens */
+        margin-left: 5px; /* Keep margin minimal */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+    }
+
+    nav a {
+        font-size: 0.8em; /* Further adjust font size for very small screens */
+        margin: 5px 0; /* Further reduce margin for very small screens */
+        border-bottom: 1px solid transparent; /* Ensure underline visibility */
+        color: #40b9bd; /* Ensure the text color is consistent */
+        font-weight: bold; /* Make the text bold */
+    }
+
+    nav a:hover {
+        color: #64605f; /* Text color on hover for very small screens */
+    }
+
+    
+}
+
 
 /**
  * Content
  * ----------------------------------------
  */
 
-.post {
-    background: #000000;
-    margin-bottom: 60px;
+ .content {
+    display: flex;
+    justify-content: center; /* Center the content-inner container */
+    padding: 20px 0;
 }
 
+/* Inner container styling */
+.content-inner {
+    max-width: 500px; /* Restrict the width for better readability */
+    width: 100%;
+    background-color: #070505; /* White background for the post content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+/* Shadow effect on hover for content-inner container */
+.content-inner:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+
+
+/* Post thumbnail styling */
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Match the rounded corners */
+    object-fit: cover;
+}
+
+
+
+/* Entry box styling */
 .entry-box {
-    padding: 48px 30px;
+    padding: 20px;
 }
 
+/* Entry header styling */
 .entry-header {
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 100px; /* Add top padding to move the images down */
+
 }
 
 .entry-title {
-    font-size: 38px;
-    margin: 0 0 12px;
-    a {
-        color: #ffffff;
-        text-decoration: none;
-        &:hover {
-            color: $accent-color;
-        }
+    font-family: 'Poiret One', cursive;
+    font-size: 5em;
+    color: #4e756f; /* Darker color for better readability */
+    margin: 0;
+    text-align: center;
+
+}
+/* Entry content styling */
+.entry-content {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .inner {
+        padding: 15px;
     }
-}
 
-.entry-meta,
-.entry-footer {
-    color: #aeb0b1;
-    font: 14px/1.5 $alt-font;
-}
+    .entry-title {
+        font-size: 3em;
+    }
 
-.entry-footer {
-    margin-bottom: 24px;
-    margin-top: 24px;
-}
-
-.entry-meta a,
-.entry-footer a {
-    text-decoration: none;
+    .entry-content {
+        font-size: 1em;
+    }
 }
 
 .share-post {
@@ -930,4 +1091,7 @@ ul.search-results {
     .author-image+.author-details {
         padding-left: 0;
     }
+
+
+    
 }

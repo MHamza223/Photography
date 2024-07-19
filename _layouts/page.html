@@ -5,7 +5,10 @@ layout: default
     <div class="inner">
         <article class="post">
             {% if page.featured_image %}
-            <div class="post-thumbnail"><img src="{{ "/images/" | append: page.featured_image | prepend: site.baseurl }}" alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}" /></div>
+            <div class="post-thumbnail">
+                <img src="{{ "/images/" | append: page.featured_image | prepend: site.baseurl }}" 
+                     alt="{% if page.featured_image_alt %}{{ page.featured_image_alt }}{% else %}{{ page.title }}{% endif %}" />
+            </div>
             {% endif %}
             <div class="entry-box">
                 <header class="entry-header">
@@ -16,5 +19,5 @@ layout: default
                 </div><!-- .entry-content -->
             </div><!-- .entry-box -->
         </article><!-- .post -->
-    </div><!-- .inner -->
+    </div><!-- .content-inner -->
 </main><!-- .content -->
