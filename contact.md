@@ -5,7 +5,7 @@ permalink: /contact/
 
 <h1 class="contact">Get in Touch</h1>
 <p>If you have any questions or would like to get a quote, please contact via email:</p>
-<p><a href="mailto:mo.a.photoz@gmail.com" class="contact-email">mo.a.photoz@example.com</a></p>
+<p><a href="mailto:mo.a.photoz@gmail.com" class="contact-email">mo.a.photoz@gmail.com</a></p>
 
 
 <style>
