@@ -61,52 +61,78 @@ h2 {
     flex-direction: row-reverse; /* Stacked layout for smaller screens */
 }
 
+
+.portfolio-image {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: auto;
+  }
+
 .portfolio-image img {
-    width: 100%;
-    max-width: 100%; /* Ensure images fit within their container */
-    height: auto; /* Maintain aspect ratio */
+    position: absolute;  /* Absolute positioning for overlap */
+    top: 0;
+    left: 0;
+    width: 100%;         /* Ensure images fill the container */
+    height: auto;        /* Maintain aspect ratio */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
+.portfolio-image img:nth-child(1) {
+    z-index: 1;
+    transform: translate(25px, -60px); /* Initial position */
+  }
+  
+  .portfolio-image img:nth-child(2) {
+    z-index: 2;
+    transform: translate(45px, 20px); /* Slight offset for overlap */
+  }
+
 .portfolio-image img:hover {
-    transform: scale(1.05); /* Image zoom effect on hover */
+    transform: scale(0.5); /* Image zoom effect on hover */
 }
 
+
+
+
+/* Portfolio Details */
 .portfolio-details {
-    margin: 1rem 0; /* Adjusted margins for smaller screens */
-    text-align: center;
+    text-align: center; /* Center-align text */
+    margin-bottom: 3rem; /* Space below title */
+=
 }
+
 
 .portfolio-item.reverse .portfolio-details {
-    margin: 1rem 0; /* Adjusted margins for smaller screens */
+    margin: 1rem 0; /* Consistent space for reverse items */
     text-align: center;
-    margin-right: 1rem;
+    margin-right: 1rem; /* Additional margin for reverse items */
 }
 
 .portfolio-details h3 {
-    margin: 0;
     font-size: 1rem; /* Reduced font size for smaller screens */
+    margin-bottom: -0.5rem; /* Space below title */
+
 }
 
 .portfolio-details h3 a {
     text-decoration: none;
     color: #333;
-    margin-left: 1rem
 }
 
 .portfolio-details p {
     font-size: 0.75rem; /* Reduced font size for smaller screens */
-    margin-top: 0.5rem;
-    margin-left: 1rem
+    margin: 0.5rem 0 1rem; /* Margin above and below text */
+    margin-left: 1rem; /* Space below title */
+
 }
 
 .portfolio-details .btn {
     display: inline-block;
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 1rem; /* Padding inside the button */
     background: linear-gradient(145deg, #898787, #c1bebe); /* Gradient background */
-    color: #383838;
+    color: #fefefe;
     border: none;
     border-radius: 10px; /* Subtle rounded corners */
     text-decoration: none;
@@ -117,14 +143,14 @@ h2 {
     font-weight: 500; /* Medium weight for a modern look */
     text-transform: uppercase; /* Uppercase text for emphasis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    margin-left: 1rem
 }
 
 .portfolio-details .btn:hover {
-    background-color: #555;
+    background: linear-gradient(145deg, #a89f9f, #e1dcdc); /* Slightly lighter gradient on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
     transform: translateY(-2px); /* Lift effect on hover */
 }
+
 
 
 
@@ -285,9 +311,11 @@ h2 {
     border-radius: 8px;
     object-fit: cover; /* Ensure images fill the space properly */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start with invisible */
+    transform: translateY(20px); /* Slightly moved down */
+    animation: fadeInEase 1s ease-in-out forwards; /* Animation for easing in */
     transition: transform 0.3s ease-in-out;
 }
-
 .album-gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -353,6 +381,20 @@ h2 {
 .prev:hover, .next:hover {
     color: #ddd;
 }
+
+
+/* Keyframes for Easing In */
+@keyframes fadeInEase {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
