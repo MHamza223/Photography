@@ -17,10 +17,35 @@ galleryImages.forEach((img, index) => {
   });
 });
 
-// Close Lightbox
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.querySelector('.lightbox');
+    const closeBtn = document.querySelector('.close'); // Make sure this is the correct selector
+  
+    // Check if closeBtn exists to prevent the error
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+    }
+  });
+
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.querySelector('.lightbox');
+    const closeBtn = document.querySelector('.close'); // Make sure this is the correct selector
+  
+    // Check if closeBtn exists to prevent the error
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+      });
+    }
+  });
+  
+
+
 
 // Show Image in Lightbox
 function showImage(index) {
