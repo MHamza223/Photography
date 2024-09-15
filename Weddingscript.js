@@ -71,3 +71,25 @@ lightbox.addEventListener('click', (event) => {
     lightbox.style.display = 'none';
   }
 });
+
+
+window.addEventListener('scroll', function() {
+        // Get the home section element
+        var homeSection = document.getElementById('home');
+        
+        // Get the scroll position
+        var scrollPosition = window.scrollY;
+        
+        // Calculate the new opacity based on scroll position
+        var maxScroll = window.innerHeight;  // Maximum scroll (e.g., the height of the viewport)
+        var opacityValue = 1 - (scrollPosition / maxScroll);
+
+        // Ensure the opacity doesn't go below 0
+        if (opacityValue < 0) {
+            opacityValue = 0;
+        }
+
+        // Apply the new opacity value
+        homeSection.style.opacity = opacityValue;
+    });
+

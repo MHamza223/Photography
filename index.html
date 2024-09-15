@@ -73,24 +73,56 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you would like to work with me or just want to say hello, feel free to get in touch!</p>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      
-      <button type="submit">Send</button>
-    </form>
-  </section>
+ <!-- Contact Section -->
+ <section id="contact">
+  <h2>Contact Me</h2>
+  <p>If you would like to work with me or just want to say hello, feel free to get in touch!</p>
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Send</button>
+  </form>
+  <p id="responseMessage"></p> <!-- Message display area -->
+</section>
 
-  <script src="Weddingscript.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    var formData = new FormData(this);
+
+    fetch('contact.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+      var responseMessage = document.getElementById('responseMessage');
+
+      if (result === 'success') {
+        responseMessage.textContent = 'Thank you for contacting us. Your message has been sent successfully.';
+        responseMessage.style.color = 'green';
+
+        // Reset form fields
+        document.getElementById('contactForm').reset();
+      } else {
+        responseMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
+        responseMessage.style.color = 'red';
+      }
+    })
+    .catch(error => {
+      var responseMessage = document.getElementById('responseMessage');
+      responseMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
+      responseMessage.style.color = 'red';
+    });
+  });
+</script>
 </body>
 </html>

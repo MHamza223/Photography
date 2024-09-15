@@ -1,0 +1,17 @@
+{
+    "name": "hamza/photography",
+    "autoload": {
+        "psr-4": {
+            "Hamza\\Photography\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Hamza Asim",
+            "email": "muhammad.asim-2@student.manchester.ac.uk"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
