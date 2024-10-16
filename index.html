@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="Styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -25,107 +24,35 @@
 
     <!-- Portfolio Item 1 -->
     <div class="portfolio-item">
-      <div class="portfolio-image">
-        <a href="Wedding.html"> 
-          <img src="Images/WeddingImages/DSC04721 (1).JPG" alt="Wedding Album">
-          <img src="Images/WeddingImages/DSC04588.JPG" alt="Wedding Album">
-
-        </a>
-      </div>
-      <div class="portfolio-details">
-        <h3><a href="Wedding.html">Wedding </a></h3>
-        <p>Timeless shots of forever long memories.</p>
-        <a href="Wedding.html" class="btn">See Album</a>
-      </div>
+      <a href="Wedding.html">
+        <div class="portfolio-image">
+          <img src="Images/WeddingImages/James&Alisha/DSC08153.jpg" alt="Wedding Album">
+          <div class="portfolio-label">Weddings</div>
+        </div>
+      </a>
     </div>
 
     <!-- Portfolio Item 2 -->
-    <div class="portfolio-item reverse">
-      <div class="portfolio-image">
-        <a href="Events.html">
+    <div class="portfolio-item">
+      <a href="Events.html">
+        <div class="portfolio-image">
           <img src="Images/PartyImages/DSC05241 (1).JPG" alt="Event Album">
-          <img src="Images/PartyImages/DSC05313.JPG" alt="Event Album">
-
-        </a>
-      </div>
-      <div class="portfolio-details">
-        <h3><a href="Events.html">Events </a></h3>
-        <p>Capturing the energy of each unique occasion.</p>
-        <a href="Events.html" class="btn">See Album</a>
-
-      </div>
+          <div class="portfolio-label">Events</div>
+        </div>
+      </a>
     </div>
 
     <!-- Portfolio Item 3 -->
     <div class="portfolio-item">
-      <div class="portfolio-image">
-        <a href="Brandshoot.html">
-          <img src="Images/Brandshoot/DSC07116.jpg" alt="Portrait Album">
-    
-          <img src="Images/Brandshoot/DSC07432.jpg" alt="Portrait Album">
-
-        </a>
-      </div>
-      <div class="portfolio-details">
-        <h3><a href="Brandshoot.html">Brand Shoot</a></h3>
-        <p>Photographs that speak the brand's language.</p>
-        <a href="Brandshoot.html" class="btn">See Album</a>
-
-      </div>
+      <a href="Brandshoot.html">
+        <div class="portfolio-image">
+          <img src="Images/Brandshoot/DSC07116.jpg" alt="Brand Shoot">
+          <div class="portfolio-label">Brand Shoot</div>
+        </div>
+      </a>
     </div>
   </section>
 
- <!-- Contact Section -->
- <section id="contact">
-  <h2>Contact Me</h2>
-  <p>If you would like to work with me or just want to say hello, feel free to get in touch!</p>
-  <form id="contactForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-    
-    <button type="submit">Send</button>
-  </form>
-  <p id="responseMessage"></p> <!-- Message display area -->
-</section>
-
-<script>
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
-
-    var formData = new FormData(this);
-
-    fetch('contact.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(result => {
-      var responseMessage = document.getElementById('responseMessage');
-
-      if (result === 'success') {
-        responseMessage.textContent = 'Thank you for contacting us. Your message has been sent successfully.';
-        responseMessage.style.color = 'green';
-
-        // Reset form fields
-        document.getElementById('contactForm').reset();
-      } else {
-        responseMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
-        responseMessage.style.color = 'red';
-      }
-    })
-    .catch(error => {
-      var responseMessage = document.getElementById('responseMessage');
-      responseMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
-      responseMessage.style.color = 'red';
-    });
-  });
-</script>
 
 <script src="Homescript.js"></script>
 

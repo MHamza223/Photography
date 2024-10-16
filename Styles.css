@@ -1,10 +1,9 @@
-/* Home Section */
-
 html, body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 #home {
@@ -19,18 +18,7 @@ html, body {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 0;
-    transition: opacity 0.3s ease-out; /* Smooth transition for opacity */
-    z-index: 1;
 }
-
-
-/* Ensure content under #home is visible */
-body {
-    background-color: #f5f5f5;
-    font-family: 'Julius Sans One', sans-serif;
-}
-
 
 .home-content {
     z-index: 2;
@@ -46,117 +34,86 @@ body {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-family: 'Poppins';
-
 }
 
 /* Portfolio Section */
 #portfolio {
-    padding: 2rem 1rem;
+    padding: 0; /* Remove padding around portfolio section */
+    margin: 0; /* Remove margin to allow images to fully cover */
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* No gap between images */
+    align-items: center;
 }
 
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
+    font-weight: 600;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 /* Portfolio Item */
 .portfolio-item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 4rem;
-    justify-content: space-between;
-    gap: 1.5rem;
-    flex-wrap: nowrap; /* Ensure items stay side-by-side */
-}
-
-.portfolio-item.reverse {
-    flex-direction: row-reverse;
-}
-
-/* Portfolio Image */
-.portfolio-image {
-    flex: 1 1 45%; /* Set image containers to be responsive */
-    max-width: 500px; /* Limit maximum width of the images */
     position: relative;
+    width: 100vw; /* 100% of viewport width */
+    height: 80vh; /* Large height to showcase the images */
     overflow: hidden;
+    margin: 0; /* Remove margin to ensure full width */
+    padding: 0; /* Remove padding */
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .portfolio-image img {
     width: 100%;
-    height: auto;
-    transition: all 0.3s ease;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while keeping the aspect ratio */
+    filter: brightness(90%); /* Dim the images */
+    transition: all 0.4s ease;
 }
 
-.portfolio-image img:nth-child(1) {
-    top: 0;
+/* Text always displayed over the image */
+.portfolio-label {
+    position: absolute;
+    bottom: 0;
     left: 0;
-    z-index: 1;
-    transform: rotate(-3deg); /* Slightly increased tilt */
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-image img:nth-child(2) {
-    top: 90px; /* Increased overlap */
-    left: 60px; /* Increased overlap */
-    z-index: 2;
-    transform: rotate(3deg); /* Slightly increased tilt */
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Portfolio Details */
-.portfolio-details {
-    flex: 1 1 45%; /* Responsive width for the text section */
-    max-width: 500px; /* Limit maximum width */
-    margin: 0;
-}
-
-.portfolio-details h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.portfolio-details h3 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.portfolio-details p {
-    font-size: 1rem;
-    margin: 0.5rem 0 1rem;
-    font-family: 'Poppins';
-
-}
-
-.portfolio-details .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(145deg, #898787, #c1bebe);
-    color: #fefefe;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 0.9rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text contrast */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     font-weight: 500;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Ensure text stays on top of image */
 }
 
-.portfolio-details .btn:hover {
-    background: linear-gradient(145deg, #a89f9f, #e1dcdc);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+.portfolio-label h3 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.portfolio-label p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 
 /* Contact Section */
 #contact {
     padding: 2rem 1rem;
     background-color: #b2b0b0;
-    
 }
 
 #contact h2 {
@@ -168,8 +125,6 @@ h2 {
 #contact form {
     max-width: 600px;
     margin: 0 auto;
-    font-family: 'Poppins';
-
 }
 
 #contact label {
@@ -210,23 +165,16 @@ h2 {
     }
 
     .portfolio-item {
-        flex-direction: row; /* Keep the side-by-side layout */
-        justify-content: space-between; /* Space between images and details */
+        width: 100vw;
+        height: 60vh; /* Adjust height for smaller screens */
     }
 
-    .portfolio-item.reverse {
-        flex-direction: row-reverse; /* Maintain reverse layout */
+    .portfolio-label h3 {
+        font-size: 2rem;
     }
 
-    .portfolio-image,
-    .portfolio-details {
-        flex: 1 1 100%; /* Full width for smaller screens */
-        max-width: 100%; /* Allow both sides to adjust to screen size */
-    }
-
-    .portfolio-image img:nth-child(2) {
-        top: 60px; /* Adjusted overlap for smaller screens */
-        left: 40px; /* Adjusted overlap for smaller screens */
+    .portfolio-label p {
+        font-size: 1rem;
     }
 }
 
@@ -236,12 +184,21 @@ h2 {
 
 
 
-
-
   
 
 
   
+
+
+
+
+
+
+
+
+
+
+
 
 
 
