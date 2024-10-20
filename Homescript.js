@@ -12,3 +12,13 @@ window.addEventListener('scroll', function() {
     }
   });
   
+  window.onload = function() {
+    const heading = document.querySelector('#typewriter');
+    setTimeout(() => {
+        heading.style.animation = 'typing 4s steps(40, end), blink-caret 0.75s step-end 4';
+    }, 500); // 500ms delay before typing starts
+
+    heading.addEventListener('animationend', () => {
+        heading.classList.add('finished');
+    });
+};

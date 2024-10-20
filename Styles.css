@@ -20,21 +20,69 @@ html, body {
     text-align: center;
 }
 
+#home h1 {
+    font-size: 4rem; /* Increase font size for a more grand look */
+    margin: 0;
+    font-family: 'Julius Sans One', sans-serif; /* Elegant, professional font */
+    text-transform: uppercase; /* Make the heading all-caps for emphasis */
+    letter-spacing: 4px; /* Increase letter spacing for a cleaner feel */
+    color: #ffffff; /* Choose a sophisticated dark blue/grey tone */
+    background: linear-gradient(90deg, rgb(242, 241, 240) 0%, rgb(225, 184, 102) 100%); /* Subtle gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text with gradient color */
+    text-align: center;
+    padding: 2rem 0; /* Add more padding to create space around the header */
+    line-height: 1.2;
+    font-weight: bold;
+}
+
 .home-content {
     z-index: 2;
     max-width: 90%;
 }
 
-#home h1 {
-    font-size: 3rem;
+
+
+
+#typewriter {
+    font-size: 4rem;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff;
     margin: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+    overflow: hidden; /* Ensures the text stays inside the container */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 3px solid #313131; /* Simulate the cursor */
+    width: 0; /* Initially hide the text */
+    animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Change the blink-caret animation to infinite */
 }
 
-#home p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    font-family: 'Poppins';
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Reveal the entire text */
+    }
 }
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #313131;
+    }
+}
+
+#typewriter.finished {
+    width: 100%; /* Ensure the text stays visible */
+    border-right: none; /* Remove the cursor */
+}
+
+
 
 /* Portfolio Section */
 #portfolio {
@@ -48,7 +96,7 @@ html, body {
 
 h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
     font-family: 'Julius Sans One', sans-serif;
@@ -120,6 +168,7 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    
 }
 
 #contact form {
@@ -219,7 +268,7 @@ h2 {
 #album-header {
     text-align: center;
     padding: 2rem;
-    background-color: #bdc1c3;
+    background-color: #5f5e5e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Julius Sans One', sans-serif;
 
@@ -228,8 +277,10 @@ h2 {
 #album-header h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    color: #313131;
-    
+    color: #615f5f;
+    background: linear-gradient(90deg, rgb(220, 176, 132) 0%, rgb(143, 104, 45) 100%); /* Subtle gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Text with gradient color */
 }
 
 #album-header p {
