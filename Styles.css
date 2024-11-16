@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -288,36 +288,42 @@ h2 {
     color: #777;
 }
 
-/* Album Gallery Section with Masonry Layout */
+
+
+
+
+
+
 #album {
-    padding: 1rem;
-    background-color: #f8f8f8;
+    padding: 0;
+    background-color: #000000;
 }
 
+/* Album Gallery Container with Grid */
 .album-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: minmax(150px, auto); /* Adjust height dynamically */
-    gap: 5px; /* Adjust spacing between images */
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 0px; /* Remove gaps between images */
     padding: 0;
     background-color: #ffffff;
+    align-items: start; /* Align items to the top of their grid cells */
 }
 
+/* Album Gallery Images */
 .album-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover; /* Ensure images fill the space properly */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start with invisible */
-    transform: translateY(20px); /* Slightly moved down */
-    animation: fadeInEase 1s ease-in-out forwards; /* Animation for easing in */
-    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Images will fill their grid column */
+    height: auto; /* Keep original aspect ratio */
+    object-fit: cover; /* Make sure the images fit within their grid cells */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+/* Hover effect for images */
 .album-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slightly zoom the image */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
+
+
 
 /* Lightbox Styles */
 .lightbox {
@@ -397,8 +403,8 @@ h2 {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .album-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts number of columns for medium screens */
-    }
+        grid-template-columns: repeat(2, minmax(50px, 1fr)); /* Single column on smaller screens */
+        }
 
     #album-header p {
         font-size: 1.5rem; /* Adjust paragraph font size for medium screens */
@@ -409,7 +415,7 @@ h2 {
 
 @media (max-width: 480px) {
     .album-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); /* Adjusts grid layout for mobile */
+        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Adjusts grid layout for mobile */
     }
 }
 
