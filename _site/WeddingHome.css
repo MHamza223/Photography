@@ -1,0 +1,158 @@
+/* General Styles */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Light grey background color for the entire page */
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+#home h1 {
+  font-size: 4rem; /* Increase font size for a more grand look */
+  margin: 0;
+  font-family: 'Julius Sans One', sans-serif; /* Elegant, professional font */
+  text-transform: uppercase; /* Make the heading all-caps for emphasis */
+  letter-spacing: 4px; /* Increase letter spacing for a cleaner feel */
+  color: #ffffff; /* Choose a sophisticated dark blue/grey tone */
+  background: linear-gradient(90deg, rgb(242, 241, 240) 0%, rgb(225, 184, 102) 100%); /* Subtle gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Text with gradient color */
+  text-align: center;
+  padding: 2rem 0; /* Add more padding to create space around the header */
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+  padding: 0; /* Remove padding around portfolio section */
+  margin: 0; /* Remove margin to allow images to fully cover */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Add gap between portfolio items */
+  align-items: center;
+  
+}
+
+
+/* Portfolio Item */
+.portfolio-item {
+  position: relative;
+  width: 90vw; /* Ensure the container is responsive on small screens */
+  height: 30vh; /* Adjust height for smaller screens, more balanced */
+  margin: 1rem 0; /* Margin for spacing between items */
+}
+
+.portfolio-image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%; /* Each image now fills the entire width */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while keeping the aspect ratio */
+  filter: brightness(90%); /* Dim the images */
+  transition: all 0.4s ease;
+}
+
+.portfolio-image img:hover {
+  filter: brightness(110%); /* Highlight image on hover */
+}
+
+/* Text always displayed over the image */
+.portfolio-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text contrast */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 2; /* Ensure text stays on top of image */
+}
+
+.portfolio-label h3 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.portfolio-label p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  #home h1 {
+    font-size: 2.5rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  .portfolio-item {
+    width: 100vw; /* Full width on small screens */
+    height: 70vh; /* Adjust height to fit better on mobile */
+  }
+
+  .portfolio-label h3 {
+    font-size: 2rem; /* Make text smaller for better readability */
+  }
+
+  .portfolio-label p {
+    font-size: 1rem; /* Adjust the paragraph font size */
+  }
+
+  .portfolio-image img {
+    width: 100%; /* Ensures images take up the full width */
+    height: 100%; /* Ensures images take up the full height */
+    object-fit: cover; /* Keep the image fitting within the container */
+  }
+}
+ 
+@media screen and (max-width: 480px) {
+  /* Portfolio Item */
+.portfolio-item {
+  position: relative;
+  width: 100vw; /* Ensure the container is responsive on small screens */
+  height: 30vh; /* Adjust height for smaller screens, more balanced */
+  margin: 1rem 0; /* Margin for spacing between items */
+  background-color: white;
+}
+
+.portfolio-image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+}
+
+  
+
+  .portfolio-label h3 {
+    font-size: 1.8rem; /* Slightly smaller text on very small screens */
+  }
+
+  .portfolio-label p {
+    font-size: 0.9rem; /* Adjust paragraph text size */
+  }
+}
