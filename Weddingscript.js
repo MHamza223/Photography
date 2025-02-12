@@ -8,6 +8,32 @@ const nextBtn = document.getElementById('next');
 
 let currentImageIndex;
 
+
+    // Targeting all portfolio items
+    const portfolioItems = document.querySelectorAll('.album-gallery');
+
+    // Create an intersection observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the 'visible' class to trigger the animation
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing after it's visible
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the image is visible
+    });
+    
+    // Observe each portfolio item
+    portfolioItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    
+
+
+    
 // Open Lightbox
 galleryImages.forEach((img, index) => {
   img.addEventListener('click', () => {
@@ -72,24 +98,4 @@ lightbox.addEventListener('click', (event) => {
   }
 });
 
-
-window.addEventListener('scroll', function() {
-        // Get the home section element
-        var homeSection = document.getElementById('home');
-        
-        // Get the scroll position
-        var scrollPosition = window.scrollY;
-        
-        // Calculate the new opacity based on scroll position
-        var maxScroll = window.innerHeight;  // Maximum scroll (e.g., the height of the viewport)
-        var opacityValue = 1 - (scrollPosition / maxScroll);
-
-        // Ensure the opacity doesn't go below 0
-        if (opacityValue < 0) {
-            opacityValue = 0;
-        }
-
-        // Apply the new opacity value
-        homeSection.style.opacity = opacityValue;
-    });
 
