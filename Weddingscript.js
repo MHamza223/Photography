@@ -7,10 +7,25 @@ const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 
 let currentImageIndex;
-
-
-    // Select all portfolio items
 const portfolioItems = document.querySelectorAll('.album-gallery');
+
+
+
+window.addEventListener("load", () => {
+ 
+
+  // Wait a short delay and reapply observer
+  setTimeout(() => {
+      portfolioItems.forEach(item => {
+          observer.observe(item);
+          if (isInViewport(item)) {
+              item.classList.add("visible"); // Apply immediately if in viewport
+          }
+      });
+  }, 100); // Small delay to allow proper reset
+});
+
+
 
 // Create the IntersectionObserver
 const observer = new IntersectionObserver((entries, observer) => {
