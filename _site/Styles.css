@@ -93,6 +93,15 @@ html, body {
     align-items: center;
 }
 
+#portfolio p {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin-top: 1rem;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
 h2 {
     text-align: center;
     font-size: 1.3rem;
@@ -168,6 +177,8 @@ h2 {
     margin-top: 0.5rem;
 }
 
+
+
 /* Contact Section */
 #contact {
     padding: 2rem 1rem;
@@ -239,6 +250,16 @@ h2 {
 
 
 
+.portfolio-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 6px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
@@ -305,7 +326,6 @@ h2 {
 
 
 #album {
-    padding: 0;
     background-color: #000000;
 }
 
@@ -314,12 +334,15 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically create columns based on screen size */
     gap: 0px; /* Remove gaps between images */
-    padding: 0;
     background-color: #ffffff;
     align-items: start; /* Align items to the top of their grid cells */
     grid-gap: 16px; /* Adjust this gap if needed */
+    padding-bottom: 150px; /* Ensure enough space at the bottom */
+
 
 }
+
+
 
 /* Album Gallery Images */
 .album-gallery img {
@@ -426,7 +449,7 @@ h2 {
     .album-gallery {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically create columns based on screen size */
         grid-gap: 16px; /* Adjust this gap if needed */
-
+        padding-bottom: 150px; /* Ensure enough space at the bottom */
     }
 
     #album-header p {
@@ -439,6 +462,8 @@ h2 {
 @media (max-width: 480px) {
     .album-gallery {
         grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Adjusts grid layout for mobile */
+        padding-bottom: 100px; /* Ensure enough space at the bottom */
+
     }
 }
 

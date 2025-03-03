@@ -35,8 +35,30 @@ html, body {
   flex-direction: column;
   gap: 2rem; /* Add gap between portfolio items */
   align-items: center;
+  padding-bottom: 50px;
   
 }
+#portfolio p {
+  font-size: 1rem;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-top: -1rem; /* Adjust this value as needed */
+
+}
+
+#portfolio p::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+  margin: 0.3rem auto 0; /* Reduce space between text and line */
+  opacity: 0.6;
+}
+
 
 
 /* Portfolio Item */
@@ -93,10 +115,6 @@ html, body {
   font-family: 'Julius Sans One', sans-serif;
 }
 
-.portfolio-label p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
