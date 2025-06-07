@@ -4,47 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shot by M.H</title>
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="/src/CSS/Styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+  
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <!-- Home Section -->
   <section id="home">
     <div class="home-content">
       <h1 id="typewriter"><span>Shot By M.H</span></h1>
-
     </div>
   </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-
-    <!-- Portfolio Item 1 -->
     <div class="portfolio-item">
-      <a href="WeddingHome.html">
+      <a href="src/WeddingHome.html">
         <div class="portfolio-image">
           <img src="Images/WeddingImages/James&Alisha/DSC08153.jpg" alt="Wedding Album">
           <div class="portfolio-label">Weddings</div>
         </div>
       </a>
     </div>
-
-    <!-- Portfolio Item 2 -->
     <div class="portfolio-item">
-      <a href="Events.html">
+      <a href="src/Albums/Events.html">
         <div class="portfolio-image">
           <img src="Images/PartyImages/DSC05241 (1).JPG" alt="Event Album">
           <div class="portfolio-label">Events</div>
         </div>
       </a>
     </div>
-
-    <!-- Portfolio Item 3 -->
     <div class="portfolio-item">
-      <a href="Brandshoot.html">
+      <a href="src/Albums/Brandshoot.html">
         <div class="portfolio-image">
           <img src="Images/Brandshoot/DSC07116.jpg" alt="Brand Shoot">
           <div class="portfolio-label">Brand Shoot</div>
@@ -53,8 +53,37 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+  
+    <form action="https://formsubmit.co/hamzaasim223@gmail.com" method="POST" class="contact-form">
+      
+      <!-- Formspree/Spam Protection -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://shotbymh.com"> <!-- change this -->
+  
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  
+    <div class="social-links">
+      <p>Or reach out:</p>
+      <a href="mailto:mo.a.photoz@gmail.com">📧 Email</a> |
+      <a href="https://instagram.com/shotbym.h" target="_blank">📸 Instagram</a>
+    </div>
+  </section>
+  
 
-<script src="Homescript.js"></script>
+  <script src="Homescript.js"></script>
 
 </body>
 </html>
