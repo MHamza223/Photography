@@ -34,7 +34,7 @@ html, body {
     padding: 2rem 0; /* Add more padding to create space around the header */
     line-height: 1.2;
     font-weight: bold;
-    margin-top: 6rem; 
+    margin-top: 2rem; 
 }
 
 .home-content {
@@ -46,7 +46,7 @@ html, body {
 
 
 #typewriter {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Julius Sans One', sans-serif;
     letter-spacing: 2px;
     color: #ffffff;
