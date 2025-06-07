@@ -21,7 +21,7 @@ html, body {
 }
 
 #home h1 {
-    font-size: 4rem; /* Increase font size for a more grand look */
+    font-size: 3rem; /* Increase font size for a more grand look */
     margin: 0;
     font-family: 'Julius Sans One', sans-serif; /* Elegant, professional font */
     text-transform: uppercase; /* Make the heading all-caps for emphasis */
